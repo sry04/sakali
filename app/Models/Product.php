@@ -19,4 +19,9 @@ class Product extends Model
     {
         return $this->belongsTo('App\Models\Tipe');
     }
+
+    public function spesifications()
+    {
+      return $this->belongsTo('App\Models\Tipe');
+    }
 }
