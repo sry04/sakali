@@ -6,6 +6,7 @@ import AdminProduct from './../admin/page/Product'
 import TipeProduct from './../admin/page/TipeProduct'
 import AdminDashboard from './../admin/page/Dashboard'
 import InsertProduct from './../admin/page/InsertProduct'
+import EditProduct from './../admin/page/EditProduct'
 import KategoriProduct from './../admin/page/KategoriProduct'
 
 
@@ -32,6 +33,14 @@ const router = new VueRouter({
       path: '/admin/AddProduct',
       name: 'InsertProduct',
       component: InsertProduct,
+      meta: {
+        requireAuth: true
+      }
+    },
+    {
+      path: '/admin/EditProduct',
+      name: 'EditProduct',
+      component: EditProduct,
       meta: {
         requireAuth: true
       }

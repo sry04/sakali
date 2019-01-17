@@ -18,4 +18,3 @@
 		<script src="asset/js/fotorama/fotorama.js"></script>
 
 	</head>
-	

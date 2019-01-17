@@ -40,7 +40,9 @@
               <td>
 
                 <a href="#" class="btn text-black"><i class="fa fa-eye"></i></a>
-                <a href="#" class="btn text-black"><i class="fa fa-edit"></i></a>
+                <router-link :to="{name: 'EditProduct'}" class="btn text-black">
+                  <i class="fa fa-edit"></i>
+                </router-link>
                 <a href="#" class="btn text-black"><i class="fa fa-trash"></i></a>
 
               </td>

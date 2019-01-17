@@ -12,3 +12,4 @@
 */
 
 Route::get('/admin/{any}', 'AdminController@index')->where('any', '.*');
+Route::get('/{any}', 'FrontController@index')->where('any', '.*');
