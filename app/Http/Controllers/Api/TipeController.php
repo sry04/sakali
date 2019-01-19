@@ -25,8 +25,7 @@ class TipeController extends Controller
       ]);
 
       return Tipe::create([
-          'name' => $request->json('name'),
-
+          'name' => $request->json('name')
       ]);
   }
 
