@@ -29,13 +29,13 @@
         <li class="header">MAIN NAVIGATION</li>
           <li v-for="menu in sidebarMenu.menu" v-bind:key="menu.id" v-bind:class="{'treeview' : menu.submenu.length > 0, 'active': $route.name == menu.route.name}">
             <a href="#" v-if="menu.submenu.length > 0">
-              <i class="fa fa-dashboard"></i> <span>{{menu.title}}</span>
+              <i :class="menu.icon"></i> <span>{{menu.title}}</span>
               <span class="pull-right-container"  v-if="menu.submenu.length > 0">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
             </a>
             <router-link :to="{name: menu.route.name}" v-else>
-              <i class="fa fa-dashboard"></i> <span>{{menu.title}}</span>
+              <i :class="menu.icon"></i> <span>{{menu.title}}</span>
               <span class="pull-right-container"  v-if="menu.submenu.length > 0">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>

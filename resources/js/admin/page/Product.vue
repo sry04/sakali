@@ -8,7 +8,7 @@
           <h3 class="box-title">Tabel Data Produk</h3>
           <!--<a href="" class="btn btn-info pull-right"></a>-->
           <router-link :to="{name: 'InsertProduct'}" class="pull-right btn btn-info">
-            Add Produk
+            Tambah Produk
           </router-link>
         </div>
 
