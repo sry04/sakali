@@ -9,6 +9,7 @@ import InsertProduct from './../admin/page/InsertProduct'
 import EditProduct from './../admin/page/EditProduct'
 import KategoriProduct from './../admin/page/KategoriProduct'
 
+import AdminLogin from './../admin/page/Login'
 
 const router = new VueRouter({
   mode: 'history',
@@ -18,7 +19,7 @@ const router = new VueRouter({
       name: 'AdminDashboard',
       component: AdminDashboard,
       meta: {
-        requireAuth: true
+        requiresAuth: true
       }
     },
     {
@@ -26,7 +27,7 @@ const router = new VueRouter({
       name: 'AdminProduct',
       component: AdminProduct,
       meta: {
-        requireAuth: true
+        requiresAuth: true
       }
     },
     {
@@ -34,7 +35,7 @@ const router = new VueRouter({
       name: 'InsertProduct',
       component: InsertProduct,
       meta: {
-        requireAuth: true
+        requiresAuth: true
       }
     },
     {
@@ -42,7 +43,7 @@ const router = new VueRouter({
       name: 'EditProduct',
       component: EditProduct,
       meta: {
-        requireAuth: true
+        requiresAuth: true
       }
     },
     {
@@ -50,7 +51,7 @@ const router = new VueRouter({
       name: 'KategoriProduct',
       component: KategoriProduct,
       meta: {
-        requireAuth: true
+        requiresAuth: true
       }
     },
     {
@@ -58,10 +59,45 @@ const router = new VueRouter({
       name: 'TipeProduct',
       component: TipeProduct,
       meta: {
-        requireAuth: true
+        requiresAuth: true
+      }
+    },
+    {
+      path: '/admin/auth/login',
+      name: 'AdminLogin',
+      component: AdminLogin,
+      meta: {
+        requiresAuth: false
       }
     }
   ]
 });
-
+router.beforeEach((to, from, next) => {
+  var token = localStorage.getItem('token')
+    if (to.matched.some(record => record.meta.requiresAuth)) {
+      if (!token) {
+        next({
+          path: '/admin/auth/login',
+          query: {
+            redirect: to.fullPath,
+          },
+        });
+      } else {
+        next();
+      }
+    } else {
+      next(); 
+      if (token) {
+        if(to.name == 'AdminLogin') {
+          next({
+            path: '/admin/dashboard'
+          });
+        } else {
+          next();
+        }
+      } else {
+        next();
+      }      
+    }
+  })
 export default router

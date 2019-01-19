@@ -251,7 +251,7 @@
                     <a href="#" class="btn btn-default btn-flat">Profile</a>
                   </div>
                   <div class="pull-right">
-                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                    <a href="javascript:void(0)" v-on:click="logout()" class="btn btn-default btn-flat">Sign out</a>
                   </div>
                 </li>
               </ul>
@@ -269,7 +269,14 @@
 </template>
 
 <script>
+import {revokeToken} from './../../admin/utility/auth'
 export default {
+  methods: {
+    logout () {
+      revokeToken();
+      window.location.href = '/admin/auth/login'
+    }
+  }
 }
 </script>
 

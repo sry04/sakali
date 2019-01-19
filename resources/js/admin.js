@@ -29,9 +29,10 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
  */
 import Admin from './admin/layout/Admin'
 import router from './routes/admin'
-
+import store from './store/admin'
 const admin = new Vue({
     el: '#admin',
     components: {Admin},
-    router
+    router,
+    store
 });

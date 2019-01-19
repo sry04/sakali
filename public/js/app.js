@@ -48133,10 +48133,10 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\xampp7\htdocs\saodrey\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\xampp7\htdocs\saodrey\resources\sass\app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! C:\xampp7\htdocs\saodrey\resources\sass\admin.scss */"./resources/sass/admin.scss");
-module.exports = __webpack_require__(/*! C:\xampp7\htdocs\saodrey\resources\sass\user.scss */"./resources/sass/user.scss");
+__webpack_require__(/*! /var/www/html/work/suryana/sakali/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /var/www/html/work/suryana/sakali/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /var/www/html/work/suryana/sakali/resources/sass/admin.scss */"./resources/sass/admin.scss");
+module.exports = __webpack_require__(/*! /var/www/html/work/suryana/sakali/resources/sass/user.scss */"./resources/sass/user.scss");
 
 
 /***/ })

@@ -54378,7 +54378,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\xampp7\htdocs\saodrey\resources\js\user.js */"./resources/js/user.js");
+module.exports = __webpack_require__(/*! /var/www/html/work/suryana/sakali/resources/js/user.js */"./resources/js/user.js");
 
 
 /***/ })
