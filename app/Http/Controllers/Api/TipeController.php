@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers\Api;
 
-use Illuminate\Http\Request;
+use App\Http\Resources\TipeCollection;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use App\Models\Tipe;
 
 class TipeController extends Controller
 {
   public function index()
   {
-      return Tipe::all();
+    return new TipeCollection(Tipe::all());
   }
 
   public function show($id)

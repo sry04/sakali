@@ -3,8 +3,8 @@ import qs from 'qs'
 
 export default {
   /**
-   * 
-   * @param {*} form 
+   *
+   * @param {*} form
    */
   login (form) {
     const {payload} = form
@@ -18,11 +18,11 @@ export default {
       })
     };
     return Service.api(url, options)
-  }, 
-     
+  },
+
   /**
-   * 
-   * @param {*} form 
+   *
+   * @param {*} form
    */
   register (form) {
     const {payload} = form
@@ -35,11 +35,11 @@ export default {
       })
     };
     return Service.api(url, options)
-  }, 
+  },
 
   /**
-   * 
-   * @param {*} form 
+   *
+   * @param {*} form
    */
   forgot (form) {
     const {payload} = form
@@ -52,11 +52,11 @@ export default {
       })
     };
     return Service.api(url, options)
-  }, 
+  },
 
   /**
-   * 
-   * @param {*} form 
+   *
+   * @param {*} form
    */
   reset (form) {
     const {payload} = form
@@ -69,5 +69,5 @@ export default {
       })
     };
     return Service.api(url, options)
-  },         
+  },
 }

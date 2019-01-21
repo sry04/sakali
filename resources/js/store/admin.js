@@ -1,20 +1,18 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+
 Vue.use(Vuex)
 
-const store = new Vuex.Store({
-  state: {
-    login: false,
-    loading: false
-  },
-  mutations: {  
-    setLoading (state, n) {
-      state.loading = n
+export default new Vuex.Store({
+    state: {
+        isLoggedIn: !!localStorage.getItem('token')
     },
-    setLogin (state, n) {
-      state.login = n
+    mutations: {
+        loginUser (state) {
+            state.isLoggedIn = true
+        },
+        logoutUser (state) {
+            state.isLoggedIn = false
+        },
     }
-  },  
 })
-
-export default store;

@@ -50,7 +50,8 @@
                     <a href="#" class="btn btn-default btn-flat">Profile</a>
                   </div>
                   <div class="pull-right">
-                    <a href="javascript:void(0)" v-on:click="logout()" class="btn btn-default btn-flat">Sign out</a>
+                    <router-link class="btn btn-default btn-flat" :to="{ name: 'logout' }">Logout</router-link>
+                    <!-- <a href="javascript:void(0)" v-on:click="logout()" class="btn btn-default btn-flat">Sign out</a> -->
                   </div>
                 </li>
               </ul>
@@ -64,14 +65,14 @@
 </template>
 
 <script>
-import {revokeToken} from './../../admin/utility/auth'
+// import {revokeToken} from './../../admin/utility/auth'
 export default {
-  methods: {
-    logout () {
-      revokeToken();
-      window.location.href = '/admin/auth/login'
-    }
-  }
+  // methods: {
+  //   logout () {
+  //     revokeToken();
+  //     window.location.href = '/admin/auth/login'
+  //   }
+  // }
 }
 </script>
 
