@@ -26,6 +26,7 @@ try {
     require('./../../public/admin/lte/plugins/iCheck/icheck.min.js');
     require('./../../public/js/saodrey.js');
     require('./../../public/admin/lte/bower_components/datatables.net/js/jquery.dataTables.min.js');
+    require('./../../public/admin/lte/bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js');
     require('./../../public/admin/lte/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js');
     require('./../../public/admin/lte/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js');
 
@@ -55,6 +56,11 @@ if (token) {
     console.error('CSRF token not found: https://laravel.com/docs/csrf#csrf-x-csrf-token');
 }
 
+let jwtToken =  localStorage.getItem('token');
+
+if(jwtToken){
+  window.axios.defaults.headers.common['Authorization'] = 'Bearer ${jwtToken}';
+}
 /**
  * Echo exposes an expressive API for subscribing to channels and listening
  * for events that are broadcast by Laravel. Echo and event broadcasting

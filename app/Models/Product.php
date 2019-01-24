@@ -10,18 +10,8 @@ class Product extends Model
         'kd_product', 'title', 'tipe', 'kategori', 'restock', 'jml_klik', 'status', 'link'
     ];
 
-    public function category()
-    {
-        return $this->belongsTo('App\Models\Category');
-    }
-
     public function tipe()
     {
-        return $this->belongsTo('App\Models\Tipe');
-    }
-
-    public function spesifications()
-    {
-      return $this->belongsTo('App\Models\Tipe');
+        return $this->hasOne('App\Models\Tipe');
     }
 }

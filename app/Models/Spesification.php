@@ -10,9 +10,4 @@ class Spesification extends Model
       'name'
   ];
 
-  public function product()
-  {
-      return $this->hasOne('App\Models\Product');
-
-  }
 }

@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Http\Resources\SpesificationCollection;
+use App\Http\Controllers\Controller;
 use App\Models\Spesification;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 
 
 class SpesifikasiController extends Controller
 {
   public function index()
   {
-      return Spesification::all();
+      return new SpesificationCollection(Spesification::all());
   }
 
   public function show($id)
@@ -22,7 +23,7 @@ class SpesifikasiController extends Controller
   public function store(Request $request)
   {
       $this->validate($request, [
-          'name'   => 'required|unique:tipes'
+          'name'   => 'required|unique:spesifications'
       ]);
 
       return Spesification::create([
@@ -34,7 +35,7 @@ class SpesifikasiController extends Controller
   public function update(Request $request, $id)
   {
       $this->validate($request, [
-          'name'   => 'required|unique:tipes'
+          'name'   => 'required|unique:spesifications'
       ]);
 
       $cat =  Spesification::findOrFail($id);

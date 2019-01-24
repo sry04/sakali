@@ -6,5 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Colour extends Model
 {
-    //
+  protected $fillable = [
+      'name', 'color'
+  ];
 }

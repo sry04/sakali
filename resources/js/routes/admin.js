@@ -9,14 +9,26 @@ Vue.use(VueRouter)
 // import KategoriProduct from './../admin/page/KategoriProduct'
 // import InsertKategori from './../admin/page/InsertKategori'
 // import EditKategori from './../admin/page/EditKategori'
+import SpesifikasiProduct from './../admin/page/SpesifikasiProduct'
+import InsertSpesifikasi from './../admin/page/InsertSpesifikasi'
+import EditSpesifikasi from './../admin/page/EditSpesifikasi'
+
+import SizeProduct from './../admin/page/SizeProduct'
+import InsertSize from './../admin/page/InsertSize'
+import EditSize from './../admin/page/EditSize'
 
 import TipeProduct from './../admin/page/TipeProduct'
 import InsertTipe from './../admin/page/InsertTipe'
 import EditTipe from './../admin/page/EditTipe'
 
+import ColorProduct from './../admin/page/ColorProduct'
+import InsertColor from './../admin/page/InsertColor'
+import EditColor from './../admin/page/EditColor'
+
 import AdminDashboard from './../admin/page/Dashboard'
 import Logout from './../admin/page/Logout'
 import Login from './../admin/page/Login'
+
 
 
 import AdminLogin from './../admin/page/Login'
@@ -60,6 +72,60 @@ const router = new VueRouter({
       path: '/admin/tipe',
       name: 'TipeProduct',
       component: TipeProduct,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/admin/InsertSpesifikasi',
+      name: 'InsertSpesifikasi',
+      component: InsertSpesifikasi,
+      meta: { requireAuth: true }
+    },
+    {
+      path: '/admin/EditSpesifikasi',
+      name: 'EditSpesifikasi',
+      component: EditSpesifikasi,
+      meta: { requireAuth: true }
+    },
+    {
+      path: '/admin/spesifikasi',
+      name: 'SpesifikasiProduct',
+      component: SpesifikasiProduct,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/admin/InsertSize',
+      name: 'InsertSize',
+      component: InsertSize,
+      meta: { requireAuth: true }
+    },
+    {
+      path: '/admin/EditSize',
+      name: 'EditSize',
+      component: EditSize,
+      meta: { requireAuth: true }
+    },
+    {
+      path: '/admin/size',
+      name: 'SizeProduct',
+      component: SizeProduct,
+      meta: { requiresAuth: true }
+    },
+    {
+      path: '/admin/InsertColor',
+      name: 'InsertColor',
+      component: InsertColor,
+      meta: { requireAuth: true }
+    },
+    {
+      path: '/admin/EditColor',
+      name: 'EditColor',
+      component: EditColor,
+      meta: { requireAuth: true }
+    },
+    {
+      path: '/admin/color',
+      name: 'ColorProduct',
+      component: ColorProduct,
       meta: { requiresAuth: true }
     },
     // {

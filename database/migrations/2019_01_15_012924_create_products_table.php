@@ -18,14 +18,13 @@ class CreateProductsTable extends Migration
             $table->string('kd_product');
             $table->string('title');
             $table->integer('tipe')->unsigned();
-            $table->integer('kategori')->unsigned();
+            $table->string('kategori');
             $table->date('restock');
             $table->integer('jml_klik');
             $table->enum('status',["publish","unpublish"]);
             $table->string('link',255);
             $table->timestamps();
 
-            $table->foreign('kategori')->references('id')->on('categories');
             $table->foreign('tipe')->references('id')->on('tipes');
         });
     }

@@ -36,6 +36,27 @@ const sidebar = {
       icon: 'fa fa-tags',
       submenu:[]
     },
+    {
+      id: 'spesifikasi',
+      title: 'Spesifikasi',
+      route: {name: 'SpesifikasiProduct'},
+      icon: 'fa fa-gear',
+      submenu:[]
+    },
+    {
+      id: 'size',
+      title: 'Size',
+      route: {name: 'SizeProduct'},
+      icon: 'fa fa-gear',
+      submenu:[]
+    },
+    {
+      id: 'color',
+      title: 'Color',
+      route: {name: 'ColorProduct'},
+      icon: 'fa fa-gear',
+      submenu:[]
+    },
   ]
 }
 
